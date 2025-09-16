@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <meta name="2児ママWebデザイナーのポートフォリオ。ひとつひとつ、心を込めてにデザインします。">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Serif+JP:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <header class="page-header wrapper">
+        <h1><a href="index.html">RS Portfolio</a></h1>
+         <span class="fa fa-bars menu-icon"></span>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html">Top</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="index.html#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about-water">
+        <div class="water-container">
+            <div class="water-page2">
+                <a href="https://mrso61243.wixsite.com/my-site-2">
+                    <img class="img-pc2" src="/image/water_pc.avif" alt="架空飲料水メーカーのオリジナルLP PC版">
+                </a>
+                <a href="https://mrso61243.wixsite.com/my-site-2">
+                    <img class="img-sp2" src="/image/water_sp.avif" alt="架空飲料水メーカーのオリジナルLP SP版">
+                </a>
+            </div>
+        </div>
+        <div class="about-water-box">
+            <h2>架空飲料水メーカーの<br>
+                オリジナルLP
+            </h2>
+            <div class="about-water-text">
+                <p>使用ツール：Figma、Canva、Wix<br>
+                    制作時間：20時間<br>
+                    <br>
+                    朝・昼・夜に必要とされている成分の入った水の<br>
+                    ​お試しセットを販売促進するために制作しました。<br>
+                    <br>
+                    ターゲットは30代～40代の<br>
+                    自然派・健康志向の女性向けに制作しました。<br>
+                    優しい印象を出すために<br>
+                    全体をパステルカラーでまとめました。<br>
+                    背景には大地を歩く女性の後ろ姿を使用し、<br>
+                    力強さを表現。<br>
+                    CTAを3回設置し、誘導性のUPを意識しました。<br>
+                    ​スマホでも見やすいようレスポンシブ対応です。<br>
+                </p>
+            </div>
+        </div>
+    </section><!-- profile-->
+
+    <footer>
+        <div class="footer-container">
+            <p>​© 2025 Rinka Shinoda All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const nav = document.querySelector('.main-nav');
+
+        menuIcon.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
