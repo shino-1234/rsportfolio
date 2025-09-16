@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <meta name="2児ママWebデザイナーのポートフォリオ。ひとつひとつ、心を込めてにデザインします。">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Serif+JP:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <header class="page-header wrapper">
+        <h1><a href="index.html">RS Portfolio</a></h1>
+         <span class="fa fa-bars menu-icon"></span>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html">Top</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="index.html#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about-lp">
+        <div class="lp-container">
+            <div class="lp-page2">
+                <a href="https://mrso61243.wixsite.com/room-r">
+                    <img class="img-pc2" src="/image/lp_pc.avif" alt="架空LP制作会社のオリジナルLP PC版">
+                </a>
+                <a href="https://mrso61243.wixsite.com/room-r">
+                    <img class="img-sp2" src="/image/lp_sp.avif" alt="架空LP制作会社のオリジナルLP SP版">
+                </a>
+            </div>
+        </div>
+        <div class="about-lp-box">
+            <h2>架空LP制作会社の<br>
+                オリジナルLP
+            </h2>
+            <div class="about-lp-text">
+                <p>使用ツール：Figma、Canva、Wix<br>
+                    制作時間：15時間<br>
+                    <br>
+                    LP制作会社のPRのため制作しました。<br>
+                    <br>
+                    ターゲットは30代～50代の<br>
+                    新規事業を立ち上げた<br>
+                    個人事業主の女性向け。<br>
+                    お客様に信頼性と安心感を与えつつ、<br>
+                    シンプルでおしゃれなページになるよう<br>
+                    ​くすみカラーでまとめました。<br>
+                    CTAにはLINEからでも<br>
+                    問い合わせができることを表記し、<br>
+                    視認性を高めるため<br>
+                    アニメーションをつけて強調しました。<br>
+                </p>
+            </div>
+        </div>
+    </section><!-- profile-->
+
+    <footer>
+        <div class="footer-container">
+            <p>​© 2025 Rinka Shinoda All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const nav = document.querySelector('.main-nav');
+
+        menuIcon.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
