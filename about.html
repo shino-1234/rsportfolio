@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <meta name="2児ママWebデザイナーのポートフォリオ。ひとつひとつ、心を込めてにデザインします。">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Serif+JP:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <header class="page-header wrapper">
+        <h1><a href="index.html">RS Portfolio</a></h1>
+        <span class="fa fa-bars menu-icon"></span>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html">Top</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="index.html#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="profile">
+        <h2 class="page-title">PROFILE</h2>
+        <div class="about-box2">
+            <div class="about-img2">
+                <img src="/image/about_me.avif" alt="プロフィール写真">
+            </div>
+            <div class="about-text2">
+                <p>はじめまして。<br>
+                    Webデザインを学習中の30代・二児の母<br>
+                    shinoと申します。<br>
+                    製造業で10年以上勤務しており、<br>
+                    現在は管理職としてライン管理業務に携わっております。<br>
+                    育児と仕事を両立する中で、<br>
+                    「伝えること」「作ること」に魅力を感じ、<br>
+                    Webデザインに興味を持ち、学習を始めました。<br>
+                    私がデザインする中で大切にしていることは<br>
+                    「ひとつひとつ、心を込めて」デザインすることです。<br>
+                    数多くいるデザイナーさんの中から<br>
+                    私を選んでくださったお客様のために<br>
+                    「ひとつひとつ、心を込めて」丁寧に制作いたします。<br>
+                </p>
+                <div class="skill">
+                    <p>・使用ツール：Wix/Canva/Figma</p>
+                    <p>・制作物：HP/LP/バナー/DM/名刺</p>
+                </div>
+            </div>
+        </div>
+    </section><!-- profile-->
+
+    <footer>
+        <div class="footer-container">
+            <p>​© 2025 Rinka Shinoda All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const nav = document.querySelector('.main-nav');
+
+        menuIcon.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
