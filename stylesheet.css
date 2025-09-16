@@ -1,0 +1,678 @@
+@charset "UTF-8";
+
+/*共通
+-------------------*/
+html {
+    font-size: 100%
+}
+
+body {
+    font-family: "Cormorant Garamond", serif;
+    color: #7A5D43;
+    overflow-x: hidden;
+
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Header
+--------------------*/
+.page-header {
+    font-family: "Cormorant Garamond", serif;
+    color: #FDFFF3;
+    background-color: #B0A595;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    margin: 0 auto;
+    height: 81px;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+}
+
+.page-header .wrapper {
+    padding: 0 80px;
+}
+
+.page-header h1 {
+    text-align: center;
+    padding: 0 100px;
+}
+
+.page-header a,
+.page-header a:link,
+.page-header a:visited {
+    color: #FDFFF3;
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.page-header a:hover,
+.page-header a:active {
+    color: #7A5D43;
+}
+
+.menu-icon {
+    display: none;
+    box-sizing: border-box;
+    /* paddingを含めてサイズ調整 */
+    padding: 0;
+    line-height: 1.5;
+}
+.main-nav {
+    display: flex;
+    font-size: 20px;
+    list-style: none;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    margin: 0 100px;
+}
+
+.main-nav li a {
+    color: #FDFFF3;
+    margin: 25px 30px;
+    width: 70px;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.main-nav li a:hover {
+    color: #7A5D43;
+    border-top: 1px solid #7A5D43;
+    border-bottom: 1px solid #7A5D43;
+}
+
+.main-nav li a.active {
+    border-top: 1px solid #FDFFF3;
+    border-bottom: 1px solid #FDFFF3;
+    color: #FDFFF3;
+}
+
+/* メインビジュアル
+-------------------*/
+.content.wrapper {
+    text-align: center;
+    width: 100vw;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    /* Flexboxを有効化 */
+    flex-direction: column;
+    /* 縦に並べる */
+    justify-content: center;
+    /* 縦方向で中央に寄せる */
+    align-items: center;
+    /* 横方向でも中央に寄せる */
+    text-align: center;
+    /* テキストも中央寄せ */
+}
+
+.content h2 {
+    font-size: 30px;
+    border-bottom: 1px solid #7A5D43;
+    padding-bottom: 4px;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+
+.content p {
+    font-size: 30px;
+    margin: 5px 0;
+    height: 40px;
+    font-weight: bold;
+}
+
+/* 大きい背景画像
+-------------------------*/
+#home {
+    background-image: url(/image/ph_main.avif);
+    background-size: cover;
+    background-position: center top;
+    width: 100vw;
+    /* ビューポート幅いっぱい */
+    min-height: 100vh;
+    height: 100%;
+    padding-top: 81px;
+}
+
+/* About
+------------------*/
+.page-title {
+    font-size: 40px;
+    padding: 40px 0;
+    text-align: center;
+    line-height: 81px;
+}
+
+#about {
+    background-color: #FDFFF3;
+    height: 569px;
+}
+
+.about-box {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    height: 308px;
+    width: 45%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#about h2 {
+    font-size: 40px;
+    display: flex;
+    /* Flexboxを有効化 */
+    flex-direction: column;
+    /* 縦に並べる */
+    justify-content: center;
+    /* 横方向で中央に寄せる */
+    align-items: center;
+    /* 縦方向でも中央に寄せる */
+    text-align: center;
+    /* テキストも中央寄せ */
+    height: 200px;
+}
+
+.about-text p {
+    line-height: 1.5;
+    font-size: 16px;
+    width: 325px;
+    height: 186px;
+    margin-left: 50%;
+    margin-right: auto;
+    text-align: left;
+}
+
+.about-img img {
+    display: flex;
+    /* 画像をさらに中央配置 */
+    align-items: center;
+    width: 200px;
+    /* 好きな大きさに調整 */
+    height: 200px;
+    /* 正方形にするのがポイント */
+    object-fit: cover;
+    /* 画像を枠いっぱいに切り抜き */
+    border-radius: 50%;
+    /* 丸くする */
+    border: 6px double #d2d2d2;
+    /* 縁の太さ・色を指定 */
+    transform: translateX(70px);
+}
+
+/* ボタン
+-----------------------*/
+.link-btn {
+    background-color: #FDFFF3;
+    width: 191px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 800px;
+    color: #7A5D43;
+    font-size: 17px;
+    font-weight: 100;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+
+.link-btn span {
+    display: inline-block;
+    white-space: nowrap;
+    border-bottom: 1px solid transparent;
+    /* 初期は透明 */
+    line-height: 1;
+    /* ← 下線を文字に近づける */
+}
+
+.link-btn:hover span {
+    border-bottom-color: #7A5D43;
+}
+
+.link-btn:hover {
+    background-color: #FFF;
+    letter-spacing: 1px;
+    /* ホバー時に文字間を広げる */
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+/* works
+---------------------*/
+#Works {
+    background-color: #FDFFF3;
+    width: auto;
+    height: auto;
+    text-align: center;
+
+}
+
+.works-container {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 100px;
+    margin-top: 80px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.water-page,
+.lp-page {
+    display: flex;
+    /* 横並びにする */
+    justify-content: center;
+    /* 横方向中央 */
+    align-items: center;
+    /* 縦方向も中央 */
+    gap: 10px;
+    /* 画像同士の間隔 */
+}
+
+.img-pc {
+    width: 311px;
+    height: 231px;
+}
+
+.img-sp {
+    width: 83px;
+    height: 166px;
+}
+
+.lp-content {
+    justify-content: center;
+    display: flex;
+}
+
+.bunner-content a img {
+    width: 220px;
+    height: 220px;
+}
+
+.bunner-content {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 80px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* contact
+---------------------*/
+#Contact {
+    background-color: #FDFFF3;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.5;
+    padding: 50px 0;
+}
+
+.contact-box {
+    text-align: left;
+    max-width: 564px;
+    width: 100%;
+    padding: 10px;
+    background-color: #FFF;
+    font-weight: 100;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    border: 1px solid #7A5D43;
+}
+
+.contact-box p {
+    font-size: 31px;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 30px 15px;
+}
+
+form label {
+    font-size: 14px;
+    font-weight: 100;
+    margin-bottom: 4px;
+    display: block;
+    color: #7A5D43;
+    height: 17px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 4px 8px;
+    border-bottom: 1px solid #7A5D43;
+    font-size: 14px;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    caret-color: #7A5D43 !important;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    height: 40px;
+}
+
+form textarea {
+    height: 74px;
+    resize: none;
+}
+
+.form-name {
+    display: flex;
+    gap: 16px;
+    height: 60px;
+    flex: 1;
+}
+
+.form-name-group,
+.form-group {
+    flex: 1;
+}
+
+form button {
+    background-color: #b0a595;
+    border-radius: 100px;
+    color: #FFF;
+    width: 172px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form button:hover {
+    background-color: #FFF;
+    border: 2px solid #7A5D43;
+    color: #7A5D43;
+    font-weight: 100;
+}
+
+/* footer
+------------------*/
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #b0a595;
+    height: 78px;
+    padding: 0 30px;
+}
+
+.footer-container p {
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    font-size: 12px;
+    color: #fff;
+    padding: 20px 30px;
+}
+
+/* PROFILE
+----------------------*/
+#profile {
+    background-color: #FDFFF3;
+    margin-top: 81px;
+    width: 100%;
+    height: auto;
+    padding-bottom: 70px;
+}
+
+.about-img2 {
+    width: 210px;
+    height: 210px;
+    margin: 10px 0;
+    order: 2;
+}
+
+.about-img2 img {
+    width: 200px;
+    /* 好きな大きさに調整 */
+    height: 200px;
+    /* 正方形にするのがポイント */
+    object-fit: cover;
+    /* 画像を枠いっぱいに切り抜き */
+    border-radius: 50%;
+    /* 丸くする */
+    border: 6px double #d2d2d2;
+    /* 縁の太さ・色を指定 */
+}
+
+.about-box2 {
+    background-color: #FFF;
+    border: 1px solid #7A5D43;
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 20px 40px;
+    gap: 40px;
+}
+
+.about-text2 {
+    text-align: left;
+    font-size: 18px;
+    order: 1;
+}
+
+.about-text2 p {
+    margin: 50px 0;
+}
+
+.skill {
+    text-align: left;
+    justify-content: flex-end;
+    padding-bottom: 30px;
+}
+
+.skill p {
+    margin: 0 auto;
+}
+
+
+/* WORKS
+-----------------------*/
+#works2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1.5;
+    background-color: #FDFFF3;
+    width: 100%;
+    margin-top: 81px;
+}
+
+.sub-title2 {
+    font-size: 22px;
+    display: inline-block;
+    border-bottom: 2px solid #7A5D43;
+    line-height: 0.8;
+    margin: 40px 0;
+}
+
+.bunner-container1 {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+.b1,
+.b2,
+.b3,
+.b4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.b1 a img,
+.b4 a img {
+    height: 223px;
+    width: auto;
+}
+
+.b2 a img {
+    height: 193px;
+    width: auto;
+}
+
+.b3 a img {
+    height: 242px;
+    width: auto;
+}
+
+.dm-container {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 100px;
+    place-items: center;
+}
+
+.dm-container a img {
+    height: 223px;
+
+}
+
+/* about-water,lp
+-------------------*/
+#about-water,
+#about-lp {
+    background-color: #FDFFF3;
+    margin-top: 81px;
+    padding: 70px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* 子要素を折り返さない */
+    white-space: nowrap;
+    /* テキストの折り返しも禁止 */
+}
+
+.about-water-box,
+.about-lp-box {
+    border: 1px solid #7A5D43;
+    background-color: #FFF;
+    width: 458px;
+    height: 615px;
+    border-radius: 300px 300px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 50px;
+    padding: 20px 40px;
+    gap: 40px;
+
+}
+
+.about-water-box h2,
+.about-lp-box h2 {
+    text-align: center;
+    padding-top: 60px;
+    font-weight: 700;
+}
+
+.about-water-text,
+.about-lp-text {
+    padding: 30px 10px;
+}
+
+.water-page2,
+.lp-page2 {
+    padding: 10px 0 0 350px;
+}
+.img-pc2 {
+    width: 311px;
+    height: 231px;
+}
+
+.img-sp2 {
+    width: 83px;
+    height: 166px;
+}
+
+/*modal
+---------------------*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: #fff;
+    padding: 10px;
+}
+
+.modal-content img {
+    max-width: 300px;
+    max-height: 600px;
+    margin: 15px 0;
+}
+
+.modal-imagebox img {
+    max-width: 600px;
+    /* 画像のサイズ調整 */
+    height: auto;
+    border-radius: 5px;
+}
+
+.modal-textbox {
+    flex: 1;
+    /* 残り幅いっぱいに広げる */
+}
+
+#modal-title {
+    font-size: 40px;
+    /* 文字サイズを大きく */
+    font-weight: bold;
+    /* 太字 */
+    margin-bottom: 15px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 60px;
+    color: #fff;
+    cursor: pointer;
+}
