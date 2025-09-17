@@ -137,7 +137,7 @@ html {
 /* 大きい背景画像
 -------------------------*/
 #home {
-    background-image: url(/image/ph_main.avif);
+    background-image: url(https://raw.githubusercontent.com/shino-1234/rsportfolio/refs/heads/main/image/ph_main.avif);
     background-size: cover;
     background-position: center top;
     width: 100vw;
