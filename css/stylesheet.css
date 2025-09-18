@@ -62,6 +62,7 @@ html {
     color: #7A5D43;
 }
 
+/* ハンバーガーアイコンはPCでは非表示 */
 .menu-icon {
     display: none;
     box-sizing: border-box;
@@ -69,6 +70,7 @@ html {
     padding: 0;
     line-height: 1.5;
 }
+
 .main-nav {
     display: flex;
     font-size: 20px;
@@ -99,6 +101,14 @@ html {
     border-bottom: 1px solid #FDFFF3;
     color: #FDFFF3;
 }
+
+/* PC幅（769px以上）ではハンバーガーメニューを強制的に非表示にする */
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none
+    }
+}
+
 
 /* メインビジュアル
 -------------------*/
@@ -137,7 +147,7 @@ html {
 /* 大きい背景画像
 -------------------------*/
 #home {
-    background-image: url(https://raw.githubusercontent.com/shino-1234/rsportfolio/refs/heads/main/image/ph_main.avif);
+    background-image: url(/image/ph_main.avif);
     background-size: cover;
     background-position: center top;
     width: 100vw;
@@ -296,6 +306,10 @@ html {
     width: 83px;
     height: 166px;
 }
+.img-pc:hover,
+.img-sp:hover {
+     filter: brightness(85%);
+}
 
 .lp-content {
     justify-content: center;
@@ -305,6 +319,9 @@ html {
 .bunner-content a img {
     width: 220px;
     height: 220px;
+}
+.bunner-content a img:hover {
+    filter: brightness(75%);
 }
 
 .bunner-content {
@@ -537,6 +554,13 @@ form button:hover {
     height: 223px;
     width: auto;
 }
+.b1 a img:hover,
+.b2 a img:hover,
+.b4 a img:hover,
+.b3 a img:hover
+ {
+    filter: brightness(75%);
+} 
 
 .b2 a img {
     height: 193px;
@@ -559,6 +583,9 @@ form button:hover {
 .dm-container a img {
     height: 223px;
 
+}
+.dm-container a img:hover {
+    filter: brightness(75%);
 }
 
 /* about-water,lp
@@ -609,6 +636,7 @@ form button:hover {
 .lp-page2 {
     padding: 10px 0 0 350px;
 }
+
 .img-pc2 {
     width: 311px;
     height: 231px;
@@ -618,7 +646,10 @@ form button:hover {
     width: 83px;
     height: 166px;
 }
-
+.img-pc2:hover,
+.img-sp2:hover {
+    filter: brightness(75%);
+}
 /*modal
 ---------------------*/
 .modal {
